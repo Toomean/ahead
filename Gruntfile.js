@@ -49,6 +49,10 @@ module.exports = function (grunt) {
         files: ['<%= config.app %>/styles/less/**/*.less'],
         tasks: ['less']
       },
+      rem: {
+        files: ['<%= config.app %>/styles/main.css'], // which files to watch
+        tasks: ['px_to_rem']
+      },
       gruntfile: {
         files: ['Gruntfile.js']
       },
@@ -77,6 +81,21 @@ module.exports = function (grunt) {
         files: {
           // target.css file: source.less file
           '<%= config.app %>/styles/main.css': '<%= config.app %>/styles/less/main.less'
+        }
+      }
+    },
+
+    // Add px to rem task
+    px_to_rem: {
+      dist: {
+        options: {
+          base: 16,
+          fallback: false,
+          fallback_existing_rem: false,
+          ignore: ['border', 'border-left', 'border-right', 'border-top', 'border-bottom', 'outline']
+        },
+        files: {
+          '<%= config.app %>/styles/main.css': ['<%= config.app %>/styles/main.css']
         }
       }
     },

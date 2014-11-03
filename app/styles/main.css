@@ -140,7 +140,7 @@ strong {
   font-weight: bold;
 }
 blockquote {
-  margin: 1em 40px;
+  margin: 1em 2.5rem;
 }
 /**
  * Address styling not present in Safari 5 and Chrome.
@@ -239,7 +239,7 @@ ul {
   margin: 1em 0;
 }
 dd {
-  margin: 0 0 0 40px;
+  margin: 0 0 0 2.5rem;
 }
 /**
  * Address paddings set differently in IE 6/7.
@@ -247,7 +247,7 @@ dd {
 menu,
 ol,
 ul {
-  padding: 0 0 0 40px;
+  padding: 0 0 0 2.5rem;
 }
 /**
  * Correct list images handled incorrectly in IE 7.
@@ -299,7 +299,7 @@ form {
  */
 fieldset {
   border: 1px solid #c0c0c0;
-  margin: 0 2px;
+  margin: 0 0.125rem;
   padding: 0.35em 0.625em 0.75em;
 }
 /**
@@ -313,7 +313,7 @@ legend {
   padding: 0;
   white-space: normal;
   /* 2 */
-  *margin-left: -7px;
+  *margin-left: -0.4375rem;
   /* 3 */
 }
 /**
@@ -392,9 +392,9 @@ input[type="radio"] {
   /* 1 */
   padding: 0;
   /* 2 */
-  *height: 13px;
+  *height: 0.8125rem;
   /* 3 */
-  *width: 13px;
+  *width: 0.8125rem;
   /* 3 */
 }
 /**
@@ -484,7 +484,7 @@ html {
  */
 hr {
   display: block;
-  height: 1px;
+  height: 0.0625rem;
   border: 0;
   border-top: 1px solid #ccc;
   margin: 1em 0;
@@ -572,12 +572,12 @@ textarea {
 }
 .btn {
   display: inline-block;
-  height: 36px;
-  padding: 0 19px;
+  height: 2.25rem;
+  padding: 0 1.1875rem;
   border: 1px solid;
-  border-radius: 18px;
-  line-height: 36px;
-  font-size: 12px;
+  border-radius: 1.125rem;
+  line-height: 2.25rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
@@ -585,7 +585,7 @@ textarea {
   color: inherit;
 }
 .main-header {
-  padding: 120px 0 160px;
+  padding: 7.5rem 2.5rem 10rem 0;
   background: #ffff96;
 }
 .main-header .header-main-desc {
@@ -602,14 +602,16 @@ textarea {
 }
 .main-header .logo {
   width: 100%;
-  height: 90px;
+  height: 5.625rem;
+  margin: 0.625em 0 0;
   background: url(../images/logo.png) no-repeat center top;
+  background-size: auto 100%;
   text-indent: -9999em;
 }
 .left-bar {
   float: left;
-  width: 200px;
-  margin: 0 40px;
+  width: 12.5rem;
+  margin: 0 2.5rem;
 }
 .left-bar h2 {
   margin: 0;
@@ -619,51 +621,51 @@ textarea {
   text-transform: uppercase;
 }
 .csstransforms .left-bar h2 {
-  margin-top: 20px;
+  margin-top: 1.25rem;
   transform-origin: 50% 50%;
   transform: rotate(-90deg);
 }
 .csstransforms .portfolio .left-bar h2 {
-  margin-top: -14px;
+  margin-top: -0.875rem;
 }
 .csstransforms .processes .left-bar h2 {
-  margin-top: -28px;
+  margin-top: -1.75rem;
 }
 html {
   font: 100% 'museo_sans', sans-serif;
 }
 .section-cont {
   width: 100%;
-  padding: 0 0 0 280px;
+  padding: 0 0 0 17.5rem;
 }
 .section-wrap {
-  max-width: 1280px;
+  max-width: 80rem;
   margin: 0 auto;
 }
 .main-content > section {
-  padding: 80px 0 120px;
+  padding: 5rem 0 7.5rem;
 }
 .main-content > section.specialization {
-  padding-bottom: 80px;
+  padding-bottom: 5rem;
 }
 .main-content > section.portfolio {
-  padding-bottom: 80px;
+  padding-bottom: 5rem;
 }
 .main-content > section.about {
-  padding-right: 40px;
+  padding-right: 2.5rem;
 }
 .main-content > section.processes {
-  padding-bottom: 60px;
+  padding-bottom: 3.75rem;
 }
 .main-footer {
-  padding: 72px 0 118px;
+  padding: 4.5rem 0 7.375rem;
   font-size: 0.9375em;
   line-height: 1.73333333em;
   font-weight: 300;
   color: #323232;
 }
 .main-footer .section-wrap {
-  padding: 0 0 0 280px;
+  padding: 0 0 0 17.5rem;
 }
 .main-footer address {
   font-style: normal;
@@ -671,8 +673,8 @@ html {
 .main-footer .contacts-link {
   transition: all .4s ease;
   display: inline-block;
-  margin: 0 0 0 -10px;
-  padding: 0 10px;
+  margin: 0 0 0 -0.625rem;
+  padding: 0 0.625rem;
   line-height: 1.73333333em;
   text-decoration: none;
   color: inherit;
@@ -682,7 +684,7 @@ html {
   color: #000000;
 }
 .main-footer .copy {
-  margin: 24px 0 0;
+  margin: 1.5rem 0 0;
   font-size: 0.75em;
   line-height: 2.08333333em;
 }
@@ -695,7 +697,7 @@ html {
   display: inline-block;
   vertical-align: top;
   width: 50%;
-  padding: 0 40px 40px 0;
+  padding: 0 2.5rem 2.5rem 0;
   font-size: 0.9375em;
   line-height: 1.66666667em;
 }
@@ -705,12 +707,12 @@ html {
   text-transform: uppercase;
 }
 .specialization .spec-li p {
-  margin: 8px 0 0;
+  margin: 0.5rem 0 0;
   font-weight: 300;
   color: #323232;
 }
 .specialization .spec-li-head {
-  height: 95px;
+  height: 5.9375rem;
   background-position: 0 center;
   background-repeat: no-repeat;
   background-size: auto 95%;
@@ -726,8 +728,8 @@ html {
 .portfolio .portfolio-li {
   float: left;
   width: 50%;
-  height: 340px;
-  padding: 0 40px 40px 0;
+  height: 21.25rem;
+  padding: 0 2.5rem 2.5rem 0;
 }
 .portfolio .portfolio-li-head {
   position: relative;
@@ -735,7 +737,7 @@ html {
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 0;
+  background-position: center center;
 }
 .portfolio .portfolio-li-head:hover .portfolio-li-cover {
   opacity: 1;
@@ -748,7 +750,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 40px 40px 0 40px;
+  padding: 2.5rem 2.5rem 0 2.5rem;
   background: #ffff96;
   background: rgba(255, 255, 150, 0.8);
 }
@@ -766,7 +768,7 @@ html {
   height: 100%;
 }
 .about p {
-  margin: -12px 0;
+  margin: -0.75rem 0;
   font-size: 1.5625em;
   line-height: 1.6em;
 }
@@ -784,7 +786,7 @@ html {
   display: inline-block;
   vertical-align: top;
   width: 50%;
-  padding: 0 40px 60px 0;
+  padding: 0 2.5rem 3.75rem 0;
 }
 .processes .proc-li h3 {
   margin: 0 0 0.375em;
@@ -799,11 +801,68 @@ html {
   /* Выводим число */
 }
 .processes .proc-li p {
-  margin: 8px 0 0;
+  margin: 0.5rem 0 0;
   color: #323232;
   font-size: 0.9375em;
   line-height: 1.66666667em;
   font-weight: 300;
+}
+@media screen and (max-width: 960px) {
+  html {
+    font-size: 0.875rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .specialization .spec-li {
+    width: 100%;
+  }
+  .portfolio .portfolio-li {
+    width: 100%;
+  }
+  .processes .proc-li {
+    width: 100%;
+  }
+  .section-cont {
+    padding: 0 0 0 30.625%;
+  }
+  .main-footer .section-wrap {
+    padding: 0 0 0 30.625%;
+  }
+  .left-bar {
+    width: 30.625%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 0.8125rem;
+  }
+  .main-header .header-main-desc {
+    font-size: 2em;
+  }
+  .csstransforms .left-bar h2 {
+    margin-top: 10%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .csstransforms .left-bar h2 {
+    margin-top: 15%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .csstransforms .left-bar h2 {
+    margin-top: 30%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .csstransforms .left-bar h2 {
+    margin-top: 40%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .csstransforms .left-bar h2 {
+    margin-top: 50%;
+  }
 }
 /* ==========================================================================
    Helper classes
@@ -816,7 +875,7 @@ html {
   border: 0;
   overflow: hidden;
   /* IE 6/7 fallback */
-  *text-indent: -9999px;
+  *text-indent: -624.9375rem;
 }
 .ir:before {
   content: "";
@@ -837,12 +896,12 @@ html {
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
+  height: 0.0625rem;
+  margin: -0.0625rem;
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: 1px;
+  width: 0.0625rem;
 }
 /*
  * Extends the .visuallyhidden class to allow the element to be focusable
