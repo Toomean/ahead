@@ -1,0 +1,62 @@
+.portfolio {
+	background: @clr-light-gray;
+
+	.portfolio-ul {
+		.list-unstyled;
+	}
+
+	.portfolio-li {
+		float: left;
+		width: 50%;
+		height: 340px;
+		padding: 0 40px 40px 0;
+	}
+
+	.portfolio-li-head {		
+		position: relative;
+		width: 100%;
+		height: 100%;
+
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 0 0;
+
+		&:hover {
+
+			.portfolio-li-cover {
+				opacity: 1;
+			}
+		}
+	}
+
+	.portfolio-li-cover {
+		transition: all .4s ease;
+
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 40px 40px 0 40px;
+
+		background: @clr-yellow;
+		background: rgba(255, 255, 150, .8);
+
+		h3 {
+			margin: 0;
+
+			font-size: 15em / @htmlFontSize;
+			line-height: 25em / 15;
+			text-transform: uppercase;
+		}
+
+		.portfolio-link {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

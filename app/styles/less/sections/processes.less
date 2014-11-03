@@ -1,0 +1,39 @@
+.processes {
+	background: @clr-light-gray;
+
+	.proc-ol {
+		.list-unstyled;
+		margin: -.45em 0 0;
+		counter-reset: procs;
+	}
+	.proc-li {
+		display: inline-block;
+		vertical-align: top;
+
+		width: 50%;
+		padding: 0 40px 60px 0;
+
+		h3 {
+			margin: 0 0 0.375em;
+
+			font-size: 15em / @htmlFontSize;
+			line-height: 25em / 15;
+			text-transform: uppercase;
+
+			&:before {
+				counter-increment: procs; /* Увеличиваем значение счетчика */
+    			content: counter(procs) ". "; /* Выводим число */
+			}
+		}
+
+		p {
+			margin: 8px 0 0;
+
+			color: @clr-gray;
+
+			font-size: 15em / @htmlFontSize;
+			line-height: 25em / 15;			
+			font-weight: 300;
+		}
+	}
+}

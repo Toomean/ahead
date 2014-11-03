@@ -4,13 +4,45 @@
 	margin: 0 40px;
 
 	h2 {
-		transform-origin: 50% 50%;
-		transform: rotate(90deg);
+		margin: 0;
 
 		font-size: 15em / @htmlFontSize;
 		line-height: 25em / 15;
 		font-weight: 300;
 
 		text-transform: uppercase;
+	}
+}
+
+.csstransforms {
+
+	.left-bar {
+
+		h2 {
+			margin-top: 20px;
+
+			transform-origin: 50% 50%;
+			transform: rotate(-90deg);
+		}
+	}
+
+	.portfolio {
+
+		.left-bar {
+
+			h2 {
+				margin-top: -14px;
+			}
+		}
+	}
+
+	.processes {
+
+		.left-bar {
+
+			h2 {
+				margin-top: -28px;
+			}
+		}
 	}
 }
