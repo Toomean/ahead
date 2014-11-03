@@ -46,7 +46,7 @@ module.exports = function (grunt) {
         tasks: ['test:watch']
       },
       less: {
-        files: ['<%= config.app %>/styles/less/**/**/*.less'],
+        files: ['<%= config.app %>/styles/less/**/*.less'],
         tasks: ['less']
       },
       gruntfile: {
