@@ -604,7 +604,7 @@ textarea {
   width: 100%;
   height: 5.625rem;
   margin: 0.625em 0 0;
-  background: url(../images/logo.png) no-repeat center top;
+  background: url(../images/logo.svg) no-repeat center top;
   background-size: auto 100%;
   text-indent: -9999em;
 }
