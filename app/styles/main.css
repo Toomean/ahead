@@ -724,6 +724,11 @@ html {
   background-repeat: no-repeat;
   background-size: auto 95%;
 }
+.specialization .spec-li-head.first img {
+  height: 111%;
+  position: relative;
+  top: -0.75rem;
+}
 .portfolio {
   background: #f5f5f5;
 }
