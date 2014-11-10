@@ -48,6 +48,4 @@ var App = (function(){
 	footerBlock.on('appear', function(event, $all_appeared_elements) {
 		$(this).off();
 	});
-
-	return tl2;
 })();

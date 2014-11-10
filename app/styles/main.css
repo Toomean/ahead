@@ -635,15 +635,15 @@ textarea {
   text-transform: uppercase;
 }
 .csstransforms .left-bar h2 {
-  margin-top: -0.4rem;
+  margin-top: 2.4rem;
   transform-origin: 50% 50%;
   transform: rotate(-90deg);
 }
 .csstransforms .portfolio .left-bar h2 {
-  margin-top: -0.875rem;
+  margin-top: -0.275rem;
 }
 .csstransforms .processes .left-bar h2 {
-  margin-top: -0.6rem;
+  margin-top: -0.85rem;
 }
 html {
   font: 100% 'museo_sans', sans-serif;
