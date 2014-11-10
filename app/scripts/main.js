@@ -17,9 +17,6 @@ var App = (function(){
 	//Processes
 	var tl1 = new TimelineMax({paused: true});
 		tl1.from($('.proc-ol'), 1, {x: '200%', opacity: '0'}, {x: '0%', opacity: '1', ease:Circ.easeOut}, 0.2);
-	//Footer
-	var tl2 = new TimelineMax({paused: true});
-		tl2.from($('.main-footer .section-wrap'), 0.6, {x: '200%', opacity: '0', ease:Circ.easeOut, delay: 0.4});
 	//Header animation
 	var tl3 = new TimelineMax({paused: true});
 		tl3.from($('.header-main-desc'), 0.6, {x: '200%', opacity: '0', ease:Circ.easeOut, delay: 0.4});
@@ -49,7 +46,6 @@ var App = (function(){
 		$(this).off();
 	});
 	footerBlock.on('appear', function(event, $all_appeared_elements) {
-		tl2.restart();
 		$(this).off();
 	});
 
