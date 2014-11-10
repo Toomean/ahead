@@ -863,6 +863,11 @@ html {
     margin: 0;
   }
 }
+@media screen and (max-width: 728px) {
+  .header-main-desc nobr {
+    white-space: inherit;
+  }
+}
 @media screen and (max-width: 600px) {
   html {
     font-size: 0.8125rem;
