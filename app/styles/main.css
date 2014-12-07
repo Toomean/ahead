@@ -880,23 +880,39 @@ html {
   }
 }
 @media screen and (max-width: 480px) {
-  .csstransforms .left-bar h2 {
-    margin-top: 15%;
+  .left-bar {
+    width: 0;
   }
-}
-@media screen and (max-width: 400px) {
-  .csstransforms .left-bar h2 {
-    margin-top: 30%;
+  .csstransforms .processes .left-bar h2 {
+    margin-top: 0;
   }
-}
-@media screen and (max-width: 360px) {
   .csstransforms .left-bar h2 {
-    margin-top: 40%;
+    position: relative;
+    top: -6.25rem;
+    left: 2.5rem;
+    margin: 0;
+    transform: none;
   }
-}
-@media screen and (max-width: 320px) {
-  .csstransforms .left-bar h2 {
-    margin-top: 50%;
+  .section-cont {
+    padding: 0 0 0 2.5rem;
+  }
+  .main-header .logo {
+    width: 2.75rem;
+    height: 2rem;
+    background-image: url(../images/logo-mobile.svg);
+    text-indent: 2.75rem;
+    position: absolute;
+    top: 2.1rem;
+    left: 2.5rem;
+  }
+  .main-footer .section-wrap {
+    padding: 0 0 0 2.5rem;
+  }
+  .main-content > section {
+    padding: 11.25rem 0 7.5rem;
+  }
+  .main-content .about {
+    padding-top: 5rem;
   }
 }
 /* ==========================================================================
