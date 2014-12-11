@@ -585,6 +585,7 @@ textarea {
   text-decoration: none;
   outline: none;
   color: inherit;
+  background: none;
 }
 .btn:hover {
   color: #646464;
@@ -708,6 +709,19 @@ html {
 .main-footer .f-elem {
   transition: none;
   display: inline-block;
+}
+.overlay {
+  position: fixed;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  background: #fafafa;
+}
+.overlay .feedback-form {
+  margin-left: 17.625rem;
 }
 .specialization .spec-ul {
   margin: 0;

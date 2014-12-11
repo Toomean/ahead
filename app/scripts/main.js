@@ -48,4 +48,20 @@ var App = (function(){
 	footerBlock.on('appear', function(event, $all_appeared_elements) {
 		$(this).off();
 	});
+
+	//Form behavior
+	(function(){
+		var $formStart = $('.js-show-form');
+		var $overlay = $('.overlay');
+
+		var tl1 = new TimelineMax({paused: true});
+		tl1.to( $overlay, 0.6, { bottom: '0', ease:Circ.easeOut })
+		   .to( $('body'), 0, { overflow: 'hidden' } );
+
+		$formStart.click( function(){
+			alert('go');
+			tl1.restart();
+		})
+
+	})();
 })();
