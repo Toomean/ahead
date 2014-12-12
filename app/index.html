@@ -406,14 +406,36 @@
 			</div>
 			<div class="feedback-form">
 				<form>
-					<input type="text">
-					<input type="text">
-					<input type="text">
-					<textarea>
-						
-					</textarea>
-					<button type="button">
-						
+
+					<fieldset>
+
+						<label>Имя (обязательно)</label>
+						<input type="text">
+					</fieldset>
+
+					<fieldset>
+
+						<label>Номер телефона</label>
+						<input type="text">
+					</fieldset>
+
+					<fieldset>
+
+						<label>Электронная почта (обязательно)</label>
+						<input type="text">
+					</fieldset>
+
+					<fieldset>
+
+						<label>Комментарий</label>
+						<textarea></textarea>
+
+					</fieldset>
+
+					
+
+					<button type="button" class="btn btn--bordered js-form-submit">
+						Отправить
 					</button>
 				</form>
 			</div>
@@ -424,6 +446,7 @@
 		<script src="bower_components/jquery/dist/jquery.js"></script>
 		<script src="bower_components/gsap/src/minified/TweenMax.min.js"></script>
 		<script src="bower_components/appear/jquery.appear.js"></script>
+		<script src="bower_components/jquery-autosize/jquery.autosize.js"></script>
 		<!-- endbower -->
 		<!-- endbuild -->
 		<script>

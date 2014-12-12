@@ -720,8 +720,75 @@ html {
   height: 100%;
   background: #fafafa;
 }
+.overlay .overlay-close {
+  transition: all 0.2s ease-out;
+  position: absolute;
+  top: 7.375rem;
+  left: 8.421875rem;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  background: url(../images/close.png) no-repeat 0 0;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+.overlay .overlay-close:hover {
+  transform: rotate(180deg);
+}
 .overlay .feedback-form {
+  width: 28.75rem;
   margin-left: 17.625rem;
+  padding: 7.375rem 0 0;
+}
+.overlay .feedback-form form fieldset {
+  position: relative;
+  margin: 0 0 2.75rem;
+}
+.overlay .feedback-form form label {
+  transition: top 0.2s ease-out, font-size 0.2s ease-out, color 0.2s ease-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.5625em;
+  line-height: 1.28em;
+  color: #646464;
+  cursor: text;
+}
+.overlay .feedback-form form label.active {
+  top: -1.75em;
+  font-size: 1em;
+  line-height: 1.75em;
+  color: #323232;
+  cursor: default;
+}
+.overlay .feedback-form form input {
+  transition: all 0.2s ease-out;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #646464;
+  font-size: 1.5625em;
+  line-height: 1.28em;
+  background: none;
+  outline: none;
+}
+.overlay .feedback-form form input:focus {
+  border-width: 0.125rem;
+  border-color: #000;
+}
+.overlay .feedback-form form textarea {
+  transition: all 0.2s ease-out;
+  width: 100%;
+  height: 2.3125rem;
+  border: none;
+  border-bottom: 1px solid #646464;
+  font-size: 1.5625em;
+  line-height: 1.28em;
+  background: none;
+  outline: none;
+  resize: none;
+}
+.overlay .feedback-form form textarea:focus {
+  border-width: 0.125rem;
+  border-color: #000;
 }
 .specialization .spec-ul {
   margin: 0;
@@ -880,6 +947,17 @@ html {
   .header-main-desc nobr {
     white-space: inherit;
   }
+  .overlay .overlay-close {
+    left: auto;
+    top: 2.5rem;
+    right: 2.5rem;
+  }
+  .overlay .feedback-form {
+    width: 100%;
+    margin: 0;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
 }
 @media screen and (max-width: 600px) {
   html {
@@ -893,6 +971,9 @@ html {
   }
 }
 @media screen and (max-width: 480px) {
+  .overlay .feedback-form {
+    font-size: .75em;
+  }
   .left-bar {
     width: 0;
   }
