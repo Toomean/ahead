@@ -54,6 +54,29 @@
 			</header>
 
 			<main class="main-content" role="main">
+
+				<section class="ways-of-spec">
+
+					<div class="section-wrap">
+
+						<div class="section-cont">
+							
+							<div class="column column--half left">
+
+								<p>
+									В графическом дизайне мы специализируемся на разработке фирменного стиля и дизайна упаковок.
+								</p>								
+							</div><!--
+
+						 --><div class="column column--half right">
+
+								<p>
+									В веб-дизайне мы на профессиональном уровне создаем посадочные, промо-страницы, сайты компаний и СМИ.
+								</p>								
+							</div>
+						</div>
+					</div>
+				</section>
 				
 				<section class="specialization">
 
@@ -405,36 +428,32 @@
 				
 			</div>
 			<div class="feedback-form">
-				<form>
+				<form id="register-form" action="" method="post" novalidate="novalidate">
 
 					<fieldset>
 
-						<label>Имя (обязательно)</label>
-						<input type="text">
+						<input name="fio" type="text" placeholder="Имя (обязательно)">
 					</fieldset>
 
 					<fieldset>
 
-						<label>Номер телефона</label>
-						<input type="text">
+						<input name="phone" type="text" placeholder="Номер телефона">
 					</fieldset>
 
 					<fieldset>
 
-						<label>Электронная почта (обязательно)</label>
-						<input type="text">
+						<input name="email" type="text" placeholder="Электронная почта (обязательно)">
 					</fieldset>
 
 					<fieldset>
 
-						<label>Комментарий</label>
-						<textarea></textarea>
+						<textarea name="comment" placeholder="Комментарий"></textarea>
 
 					</fieldset>
 
 					
 
-					<button type="button" class="btn btn--bordered js-form-submit">
+					<button type="submit" class="btn btn--bordered js-form-submit">
 						Отправить
 					</button>
 				</form>
@@ -446,7 +465,9 @@
 		<script src="bower_components/jquery/dist/jquery.js"></script>
 		<script src="bower_components/gsap/src/minified/TweenMax.min.js"></script>
 		<script src="bower_components/appear/jquery.appear.js"></script>
-		<script src="bower_components/jquery-autosize/jquery.autosize.js"></script>
+		<script src="bower_components/textarea-autosize/dist/jquery.textarea_autosize.js"></script>
+		<script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>
+		<script src="bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.js"></script>
 		<!-- endbower -->
 		<!-- endbuild -->
 		<script>
