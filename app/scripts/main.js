@@ -84,7 +84,7 @@ var App = (function(){
 		});
 
 		//Init input-mask
-		$('input[name="phone"]').inputmask("mask", {"mask": "[+7] (999) 999-9999"});
+		$('input[name="phone"]').inputmask("mask", {"mask": "[+7] (999) 999-9999", showMaskOnHover: false});
 		
 		//Form events
 		$textarea.textareaAutoSize();

@@ -748,6 +748,7 @@ html {
   margin: 0 0 2.75rem;
 }
 .overlay .feedback-form form input {
+  -webkit-transform: translateZ(0);
   margin-bottom: 0.0625rem;
   width: 100%;
   border: none;
@@ -755,7 +756,7 @@ html {
   font-family: 'museo_sans', sans-serif;
   font-weight: 100;
   font-size: 1.5625em;
-  line-height: 1.28em;
+  line-height: 1.6em;
   background: none;
   outline: none;
 }
@@ -778,16 +779,18 @@ html {
   color: #646464;
 }
 .overlay .feedback-form form textarea {
+  -webkit-transform: translateZ(0);
   transition: all 0.2s ease-out;
   width: 100%;
-  min-height: 2.3125rem;
-  height: 2.3125rem;
+  min-height: 2.85rem;
+  height: 2.85rem;
   max-height: 12.625rem;
   border: none;
   border-bottom: 1px solid #646464;
   font-family: 'museo_sans', sans-serif;
   font-weight: 100;
   font-size: 1.5625em;
+  line-height: 1.6em;
   background: none;
   outline: none;
   resize: none;
