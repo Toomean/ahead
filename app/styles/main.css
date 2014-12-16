@@ -738,7 +738,20 @@ html {
 .overlay .overlay-close:hover {
   transform: rotate(180deg);
 }
+.overlay .feedback-response {
+  opacity: 0;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  padding: 7.375rem 0 0;
+  font-family: 'museo_sans', sans-serif;
+  font-weight: 100;
+  font-size: 1.5625em;
+  line-height: 1.6em;
+}
 .overlay .feedback-form {
+  position: relative;
   width: 28.75rem;
   margin-left: 17.625rem;
   padding: 7.375rem 0;

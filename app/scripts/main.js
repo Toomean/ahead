@@ -51,37 +51,104 @@ var App = (function(){
 
 	//Form behavior
 	(function(){
+		var timer;
 		var $formStart = $('.js-show-form');
 		var $overlay = $('.overlay');
 		var $overlayClose = $('.overlay-close');
 
+		var $responseBlock = $('.feedback-response');
 		var $form = $('.feedback-form form');
 		var $formBtn = $form.find('.js-form-submit');
 		var $fieldset = $form.find('fieldset');
 		var $textarea = $form.find('textarea');
 
+		//Анимация появления формы со всеми полями
 		var tl1 = new TimelineMax({paused: true});
 		tl1.to( $overlay, 0.6, { bottom: '0', ease:Circ.easeOut })
 		   .to( $('body'), 0, { overflow: 'hidden' } )
 		   .staggerFromTo($fieldset.add($formBtn), 1, {y: '-200%', opacity: '0'}, {y: '0%', opacity: '1', ease:Circ.easeOut}, 0.2);
 
+		//Анимация скрытия полей и отображения ответного текста
+		var tl2 = new TimelineMax({paused: true});
+		tl2.staggerTo($fieldset.add($formBtn), .5, {y: '-400%', opacity: '0', ease:Circ.easeOut}, 0.05)
+		   .to( $responseBlock, 1, { top: '0%', opacity: '1', ease:Circ.easeOut}, 0.05);
+
+		//Анимация закрытия оверлея
+		var tl3 = new TimelineMax({paused: true});
+		tl3.to( $overlay, 0.6, { bottom: '100%', ease:Circ.easeOut })
+		   .to( $responseBlock, 0.6, { top: '-100%', ease:Circ.easeOut, delay: 0.6 } );
+
+
 		// Validation
 		$('#register-form').validate({
 			rules: {
-				fio: 'required',
+				name: 'required',
 				email: {
 					required: true,
 					email: true
 				}
 			},
 			messages: {
-				fio: 'Обязательное поле',
+				name: 'Обязательное поле',
 				email: {
 					required: 'Обязательное поле',
 					email: 'Неверный формат. Попробуйте еще'
 				}
 			}
 		});
+
+		// Ajax email
+		(function(){
+			//Get the form
+			var $form = $('#register-form');
+
+			function giveResponse(mess, closeInterval){
+				$responseBlock.text(mess);
+
+		        tl2.restart();
+		        timer = setTimeout( function(){
+					tl3.restart();
+		        }, closeInterval);
+			}
+
+			$form.submit(function(e) {
+			    
+				e.preventDefault();
+				if( $form.valid() )  {
+
+					// Serialize the form data.
+					var formData = $form.serialize();
+
+					$.ajax({
+					    type: 'POST',
+					    url: $form.attr('action'),
+					    data: formData
+					})
+					.done(function(response) {
+					    giveResponse(response, 3000);
+
+					    // Clear the form.
+					    $form.find('input, textarea').val('');
+					})
+					.fail(function(data) {
+					    // Set the message text.
+					    if (data.responseText !== '') {
+					        giveResponse(data.responseText, 3000);
+					    } else {
+					        giveResponse('Произошла ошибка с отправкой. Поздравляем, вы застали это редкое явление! Заполните форму еще раз.', 3000);
+					    }
+
+					    tl2.restart();
+					    timer = setTimeout( function(){
+					    	tl3.restart();
+					    }, 3000);
+
+					    // Clear the form.
+					    $form.find('input, textarea').val('');
+					});
+				}
+			});
+		})();
 
 		//Init input-mask
 		$('input[name="phone"]').inputmask("mask", {"mask": "[+7] (999) 999-9999", showMaskOnHover: false});
@@ -101,6 +168,7 @@ var App = (function(){
 		});
 
 		$overlayClose.click( function(){
+			clearTimeout( timer );
 			tl1.timeScale(2);
 			tl1.reverse();
 		});

@@ -452,13 +452,16 @@
 		<div class="overlay">
 			<div class="overlay-close">
 				
-			</div>
+			</div>			
 			<div class="feedback-form">
-				<form id="register-form" action="" method="post" novalidate="novalidate">
+				<div id="feedback-response" class="feedback-response">
+					Ваше сообщение отправлено
+				</div>
+				<form id="register-form" action="mailer.php" method="post" novalidate="novalidate">
 
 					<fieldset>
 
-						<input name="fio" type="text" placeholder="Имя (обязательно)">
+						<input name="name" type="text" placeholder="Имя (обязательно)">
 					</fieldset>
 
 					<fieldset>
@@ -473,7 +476,7 @@
 
 					<fieldset>
 
-						<textarea name="comment" placeholder="Комментарий"></textarea>
+						<textarea name="message" placeholder="Комментарий"></textarea>
 
 					</fieldset>
 
