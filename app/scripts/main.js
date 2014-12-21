@@ -51,16 +51,17 @@ var App = (function(){
 
 	//Form behavior
 	(function(){
-		var timer;
-		var $formStart = $('.js-show-form');
-		var $overlay = $('.overlay');
-		var $overlayClose = $('.overlay-close');
+		var timer,
+			$formStart = $('.js-show-form'),
+			$overlay = $('.overlay'),
+			$overlayClose = $('.overlay-close'),
 
-		var $responseBlock = $('.feedback-response');
-		var $form = $('.feedback-form form');
-		var $formBtn = $form.find('.js-form-submit');
-		var $fieldset = $form.find('fieldset');
-		var $textarea = $form.find('textarea');
+			$responseBlock = $('.feedback-response'),
+			$form = $('.feedback-form form'),
+			$formBtn = $form.find('.js-form-submit'),
+			$fieldset = $form.find('fieldset'),
+			$textarea = $form.find('textarea'),
+			exitType = true;
 
 		//Анимация появления формы со всеми полями
 		var tl1 = new TimelineMax({paused: true});
@@ -125,26 +126,23 @@ var App = (function(){
 					    data: formData
 					})
 					.done(function(response) {
-					    giveResponse(response, 3000);
+					    giveResponse(response, 8000);
 
 					    // Clear the form.
 					    $form.find('input, textarea').val('');
+					    exitType = false;
 					})
 					.fail(function(data) {
 					    // Set the message text.
 					    if (data.responseText !== '') {
-					        giveResponse(data.responseText, 3000);
+					        giveResponse(data.responseText, 8000);
 					    } else {
 					        giveResponse('Произошла ошибка с отправкой. Поздравляем, вы застали это редкое явление! Заполните форму еще раз.', 3000);
 					    }
 
-					    tl2.restart();
-					    timer = setTimeout( function(){
-					    	tl3.restart();
-					    }, 3000);
-
 					    // Clear the form.
 					    $form.find('input, textarea').val('');
+					    exitType = false;
 					});
 				}
 			});
@@ -169,8 +167,15 @@ var App = (function(){
 
 		$overlayClose.click( function(){
 			clearTimeout( timer );
-			tl1.timeScale(2);
-			tl1.reverse();
+
+			if(exitType) {
+				tl1.timeScale(2);
+				tl1.reverse();
+			} else {
+				tl3.restart();
+				exitType = true;
+			}
+			
 		});
 
 	})();
