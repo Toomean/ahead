@@ -138,7 +138,7 @@ var App = (function(){
 					    if (data.responseText !== '') {
 					        giveResponse(data.responseText, 11000);
 					    } else {
-					        giveResponse('Произошла ошибка с отправкой. Поздравляем, вы застали это редкое явление! Заполните форму еще раз.', 3000);
+					        giveResponse('Произошла ошибка с отправкой. Поздравляем, вы застали это редкое явление! Заполните форму еще раз.(ajax)', 11000);
 					    }
 
 					    // Clear the form.
