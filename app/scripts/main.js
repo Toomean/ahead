@@ -77,7 +77,8 @@ var App = (function(){
 		//Анимация закрытия оверлея
 		var tl3 = new TimelineMax({paused: true});
 		tl3.to( $overlay, 0.6, { bottom: '100%', ease:Circ.easeOut })
-		   .to( $responseBlock, 0.6, { top: '-100%', ease:Circ.easeOut, delay: 0.6 } );
+		   .to( $responseBlock, 0.6, { top: '-100%', ease:Circ.easeOut, delay: 0.6 } )
+		   .to( $('body'), 0, { overflow: 'visible' } );
 
 
 		// Validation
