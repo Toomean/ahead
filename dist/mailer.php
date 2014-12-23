@@ -11,9 +11,10 @@
         $message = trim($_POST["message"]);
 
         // Check that data was sent to the mailer.
-        if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if ( empty($name) OR empty($email) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             // Set a 400 (bad request) response code and exit.
-            http_response_code(400);
+            //http_response_code(400);
+            header("HTTP/1.1 400 Bad request");
             echo "Похоже, вы заполнили не все поля. Попробуйте еще раз.";
             exit;
         }
@@ -37,17 +38,20 @@
         // Send the email.
         if (mail($recipient, $subject, $email_content, $email_headers)) {
             // Set a 200 (okay) response code.
-            http_response_code(200);
+            //http_response_code(200);
+            header("HTTP/1.1 200 OK");
             echo "Ваше сообщение отправлено";
         } else {
             // Set a 500 (internal server error) response code.
-            http_response_code(500);
+            //http_response_code(500);
+            header("HTTP/1.1 500 Internal server error");
             echo "Произошла ошибка с отправкой. Поздравляем, вы застали это редкое явление! Заполните форму еще раз.(500)";
         }
 
     } else {
         // Not a POST request, set a 403 (forbidden) response code.
-        http_response_code(403);
+        //http_response_code(403);
+        header("HTTP/1.1 500 Access denied");
         echo "Произошла ошибка с отправкой. Поздравляем, вы застали это редкое явление! Заполните форму еще раз.(403)";
     }
 
