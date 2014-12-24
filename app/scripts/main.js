@@ -127,7 +127,7 @@ var App = (function(){
 					    data: formData
 					})
 					.done(function(response) {
-					    giveResponse(response, 11000);
+					    giveResponse(response, 8000);
 
 					    // Clear the form.
 					    $form.find('input, textarea').val('');
@@ -136,9 +136,9 @@ var App = (function(){
 					.fail(function(data) {
 					    // Set the message text.
 					    if (data.responseText !== '') {
-					        giveResponse(data.responseText, 11000);
+					        giveResponse(data.responseText, 8000);
 					    } else {
-					        giveResponse('Произошла ошибка с отправкой. Поздравляем, вы застали это редкое явление! Заполните форму еще раз.', 11000);
+					        giveResponse('Произошла ошибка с отправкой. Поздравляем, вы застали это редкое явление! Заполните форму еще раз.', 8000);
 					    }
 
 					    // Clear the form.
